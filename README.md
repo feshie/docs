@@ -23,8 +23,12 @@ cd contiki/tools ; make tunslip6
 
 BUILDING OUR CORE CODE
 
-for z1-coap on the nodes:
+to program nodes:
 
 make TARGET=zoul BOARD=muntjac MOTES=/dev/ttyUSB0 z1-coap.upload
 
 There are typically MAKE shellscripts which do this in each major dir to avoid cold/battery/finger issues ;-)
+
+z1-coap-config-defaults.h can be used to pre-configure the node
+
+Normally 1200s interval 
