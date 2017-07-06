@@ -22,10 +22,15 @@ if you don't have msp430 compiler the border router only needs tunslip6 (normall
 cd contiki/tools ; make tunslip6
 
 BUILDING OUR CORE CODE
-
-to program nodes:
-
-make TARGET=zoul BOARD=muntjac RADIO=cc1120 MOTES=/dev/ttyUSB0 z1-coap.upload
+to program nodes (Muntjac):
+  Connect USB cable to build PC
+  Put node into bootloader mode by pressing USR and Reset at the same time, release Reset first
+  Run " make TARGET=zoul BOARD=muntjac RADIO=cc1120 MOTES=/dev/ttyUSB0 z1-coap.upload " from mountainsensing/z1-coap
+     N.B.: The serial port may vary depedning what else is plugged in. Look in /dev or try ttyUSB1 if USB0 doesn't work
+     
+to program nodes (Z1 + MS1):
+  Connect usb cable to build PC
+  Run " make TARGET=z1-feshie z1-coap.upload " from mountainsensing/z1-coap
 
 There are typically MAKE shellscripts which do this in each major dir to avoid cold/battery/finger issues ;-)
 
