@@ -25,7 +25,7 @@ BUILDING OUR CORE CODE
 
 to program nodes:
 
-make TARGET=zoul BOARD=muntjac MOTES=/dev/ttyUSB0 z1-coap.upload
+make TARGET=zoul BOARD=muntjac RADIO=cc1120 MOTES=/dev/ttyUSB0 z1-coap.upload
 
 There are typically MAKE shellscripts which do this in each major dir to avoid cold/battery/finger issues ;-)
 
