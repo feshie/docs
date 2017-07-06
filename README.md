@@ -1,5 +1,5 @@
 # Docs
-Overview of how to build firmware for the Mountainsensing nodes
+Overview of how to build firmware for the Mountainsensing nodes. See mountainsensing.org
 
 ## To start from scratch:
 
@@ -32,12 +32,12 @@ to program nodes (Z1 + MS1):
 * Connect usb cable to build PC
 * Run " make TARGET=z1-feshie z1-coap.upload " from mountainsensing/z1-coap
 
-There are typically MAKE shellscripts which do this in each major dir to avoid cold/battery/finger issues ;-)
+There are typically MAKE shellscripts which do this for muntjac/ms2s in each major dir to avoid cold/battery/finger issues ;-)
 
-z1-coap-config-defaults.h can be used to pre-configure the node
+z1-coap-config-defaults.h can be used to pre-configure the node. Note power boards are all id 22
 
 Normally 1200s interval 
 
 ## Miscellaneous
-The z1-nothing / remote-nothing projects can be used to just test networking or as a basis for running other tests/experiments that don't need our code. -nothing nodes can also be used as "dumb" routing nodes in a pinch. These are built in the same way as z1-coap but with z1-nothing.upload or remote-nothing.upload instead of z1-coap.upload.
+The z1-nothing / remote-nothing projects can be used to just test networking or as a basis for running other tests/experiments that don't need our code. -nothing nodes can also be used as routing nodes with no sensors. These are built in the same way as z1-coap but with z1-nothing.upload or remote-nothing.upload instead of z1-coap.upload.
 
