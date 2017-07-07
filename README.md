@@ -41,3 +41,17 @@ Normally 1200s interval
 ## Miscellaneous
 The z1-nothing / remote-nothing projects can be used to just test networking or as a basis for running other tests/experiments that don't need our code. -nothing nodes can also be used as routing nodes with no sensors. These are built in the same way as z1-coap but with z1-nothing.upload or remote-nothing.upload instead of z1-coap.upload.
 
+## Border Router
+
+ipv6 prefix is set in the border-router script
+
+## Fetcher
+
+The Java CoAP data fetcher/configurer has the IPv6 prefix stored in common.conf and a list of node 4byte endings in nodes.conf
+
+checking config - make sure you use the correct prefix:
+
+java -jar fetcher.jar -p 2001:630:d0:f308: get-config 9e48
+
+--help lists everything including get-date and set-date
+
