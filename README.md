@@ -53,5 +53,9 @@ checking config - make sure you use the correct prefix:
 
 java -jar fetcher.jar -p 2001:630:d0:f308: get-config 9e48
 
+or put full ipv6 addresses in /etc/hosts then:
+
+java -jar fetcher.jar get-date router1
+
 --help lists everything including get-date and set-date
 
