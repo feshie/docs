@@ -57,5 +57,11 @@ or put full ipv6 addresses in /etc/hosts then:
 
 java -jar fetcher.jar get-date router1
 
+adc sensor like moisture is enabled with:
+
+java -jar fetcher.jar edit-config --adc1 true hum
+
+power board sensing is enabled by setting id 22 or 0 for disable
+
 --help lists everything including get-date and set-date
 
